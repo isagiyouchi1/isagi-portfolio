@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isagi - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">ISAGI</div>
+            <nav class="nav-menu">
+                <a href="#game" class="nav-link">Game</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Game Section -->
+        <section id="game" class="game-section">
+            <div class="game-header">
+                <h1><i class="fas fa-gamepad"></i> INTERACTIVE PORTFOLIO</h1>
+                <p class="subtitle">Play the snake game to unlock my developer skills!</p>
+            </div>
+            
+            <div class="game-container">
+                <div class="score-board">
+                    <div class="score-item">Score: <span id="score">0</span></div>
+                    <div class="score-item">High: <span id="high-score">0</span></div>
+                    <div class="score-item">Level: <span id="level">1</span></div>
+                    <div class="score-item">Lives: <span id="lives">3</span></div>
+                    <div class="score-item">Power: <span id="power">—</span></div>
+                </div>
+                
+                <canvas id="gameCanvas" width="600" height="400"></canvas>
+                
+                <div class="game-controls">
+                    <div class="rules">
+                        <h3><i class="fas fa-book"></i> Game Rules & Controls</h3>
+                        <ul>
+                            <li>Feed the snake to grow longer</li>
+                            <li>Avoid walls and your own tail</li>
+                            <li>Goal: Achieve high score to unlock portfolio</li>
+                        </ul>
+                        <div class="controls">
+                            <p><i class="fas fa-keyboard"></i> <strong>Controls:</strong> Arrow Keys or WASD</p>
+                        </div>
+                    </div>
+                    
+                    <div class="buttons">
+                        <button id="startBtn" class="btn btn-start"><i class="fas fa-play"></i> Start</button>
+                        <button id="pauseBtn" class="btn btn-pause"><i class="fas fa-pause"></i> Pause</button>
+                        <button id="restartBtn" class="btn btn-restart"><i class="fas fa-redo"></i> Restart</button>
+                        
+                        <div class="speed-control">
+                            <label for="speed"><i class="fas fa-tachometer-alt"></i> Speed:</label>
+                            <select id="speed">
+                                <option value="150">Easy</option>
+                                <option value="100" selected>Normal</option>
+                                <option value="60">Hard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="unlock-message" id="unlockMessage">
+                    <i class="fas fa-lock-open"></i>
+                    <p>Congratulations! You've unlocked the full portfolio. Scroll down to explore my projects!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-header">
+                <h2><i class="fas fa-code"></i> MY PROJECTS</h2>
+                <p class="section-subtitle">Web Development • Design • Creative Solutions</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Portfolio Game -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Portfolio Game Screenshot">
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Interactive Portfolio Game</h3>
+                        <p class="project-description">A creative portfolio with an integrated snake game. This project demonstrates DOM manipulation, canvas rendering, and game logic implementation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/isagiyouchi1/my-portfolio" target="_blank" class="link-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://isagiku-uz.netlify.App/" target="_blank" class="link-btn live-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: E-commerce Dashboard -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-commerce UI">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Modern E-commerce Dashboard</h3>
+                        <p class="project-description">Full-featured e-commerce platform with user authentication, product management, and payment processing. Built with MERN stack.</p>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="link-btn live-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Weather App -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Weather App">
+                        <div class="project-tags">
+                            <span class="tag">API</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Real-time Weather App</h3>
+                        <p class="project-description">Responsive weather application that fetches real-time data from OpenWeather API. Features location detection and 5-day forecast.</p>
+                        <div class="project-links">
+                            <a href="#" class="link-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="link-btn live-demo">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Contact Section -->
+        <section id="about-contact" class="about-contact-section">
+            <div class="about-section">
+                <h2><i class="fas fa-user"></i> ABOUT ME</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Hello, I'm <span class="highlight">Isagi</span></h3>
+                        <p>Passionate <strong>Web Developer</strong> and <strong>Creative Designer</strong> with expertise in building interactive, user-friendly web applications. I specialize in front-end technologies and enjoy creating unique digital experiences.</p>
+                        <div class="skills">
+                            <h4><i class="fas fa-cogs"></i> Skills & Technologies</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-code"></i>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2><i class="fas fa-envelope"></i> GET IN TOUCH</h2>
+                <p>Interested in working together or have a project in mind? Feel free to reach out!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>isagiyoyichi51@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/isagiyouchi1</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h4>Telegram</h4>
+                            <p>t.me/dnx_4</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2023 Isagi. All Rights Reserved. | Designed & Developed with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+            <div class="footer-links">
+                <a href="#game">Game</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
